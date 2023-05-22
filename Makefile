@@ -1,5 +1,5 @@
 build-image:
-	@ docker build -f devops/Dockerfile -t pedidosbackend:1 .
+	@ docker build -f devops/Dockerfile -t grupo3backend:1 .
 volume:
 	@ docker volume create pg_tendencia_data
 deploy:
