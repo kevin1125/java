@@ -10,7 +10,7 @@ services:
         mode: host
     networks:
       - desarrollo_grupotres
-  db2:
+  db3:
     image: postgres:15.0-bullseye
     environment:
       - TZ=America/Guayaquil
