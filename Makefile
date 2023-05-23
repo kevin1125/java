@@ -1,8 +1,8 @@
 build-image:
 	@ docker build -f devops/Dockerfile -t grupo3backend:1 .
 volume:
-	@ docker volume create pg_tendencia_grupotres
+	@ docker volume create pg_tendencia_data
 deploy:
-	@ docker stack deploy --with-registry-auth -c devops/stack.yml grupo3
+	@ docker stack deploy --with-registry-auth -c devops/stack.yml automatizacion
 rm:
-	@ docker stack rm grupo3
+	@ docker stack rm automatizacion

@@ -9,7 +9,7 @@ services:
         protocol: tcp
         mode: host
     networks:
-      - desarrollo_grupotres
+      - desarrollo_net
   db3:
     image: postgres:15.0-bullseye
     environment:
@@ -19,16 +19,16 @@ services:
       - POSTGRES_USER=postgres
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - pg_tendencia_grupotres:/var/lib/postgresql/data/pgdata
+      - pg_tendencia_data:/var/lib/postgresql/data/pgdata
     networks:
-      - desarrollo_grupotres
+      - desarrollo_net
            
 volumes:
-  pg_tendencia_grupotres:
+  pg_tendencia_data:
     external: true
 
 networks:
-  desarrollo_grupotres:
+  desarrollo_net:
     external: true
 
 secrets:
